@@ -1,0 +1,124 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Home</a> <a class="navbar-brand" href="newResumeFinal.pdf" download>Resume</a> <a class="navbar-brand" href="#">Contact Me</a> 
+        <a class="navbar-brand" href="https://github.com/peterlukeryan" target="_blank">Github</a> <a class="navbar-brand" href="gallery.html">Gallery</a>
+      </nav>
+
+      <style>
+         body {
+                font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+               }
+         h1 {
+                padding: 30px;
+            }
+        .parDiv {
+        margin: auto;
+        max-width: 500px;
+        padding: 25px;
+        text-align: center;
+        border-style: solid;
+        border-width: 3px;
+        background-color: honeydew;
+            
+        }
+        textarea {
+            height: 300px;
+        }
+      #subContainer {
+        padding: 50px;
+        margin: auto;
+      }
+      #mainContainer {
+        padding-bottom: 40px;
+        font-family: 'Roboto', sans-serif;
+        
+      }
+      nav {
+                border-bottom: solid;
+                border-width: 1px;
+            }
+      </style>
+   
+
+      <h1>
+        Email Me
+      </h1>
+    </head>
+  
+    <body>
+        <div id="mainContainer">
+        <div class="parDiv">
+            <form id="myForm">
+                <label for="name">Full Name</label>
+                <input name="name" class="form-control mt-2" type="text" required>
+                <label for="email" class="mt-2">Email</label>
+                <input name="email" class="form-control mt-2" type="text" required>
+                <label for="subject" class="mt-2">Subject</label>
+                <input name="subject" class="form-control mt-2" type="text" required>
+                <label for="message" class="mt-2">Message</label>
+                <textarea name="message" class="form-control mt-2" rows="6" type = "text" required></textarea>
+                <div id = "subContainer">
+                <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+   </body>
+ 
+   <script
+   type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+ ></script>
+
+ <script type="text/javascript">      (function () {
+     emailjs.init("qDrVPkTK6P_P6ILrU");
+   })();
+ </script>
+ <script>
+let domArr = []
+
+    let name = document.getElementsByName("name")[0]
+    let subject = document.getElementsByName("subject")[0];
+    let email = document.getElementsByName("email")[0];
+    let message = document.getElementsByName("message")[0];
+
+    domArr.push(name);
+    domArr.push(subject);
+    domArr.push(email);
+    domArr.push(message);
+
+    document.getElementById("myForm").addEventListener("submit", function (event){
+    
+    event.preventDefault();
+    const serviceID = "service_d9cbmu3";
+    const templateID = "template_lz5lemf";
+
+    emailjs.sendForm(serviceID, templateID, this).then(
+        (response) => {
+        
+            alert("Successfully sent.");
+            for (i = 0; i < domArr.length; i++){
+                domArr[i].value = ""
+            }
+
+        },
+        (error) => {
+            console.log("Couldn't send email.", error);
+
+         
+            
+            alert("Could not send email.");
+        }
+    );
+    });
+
+    
+    
+    </script>
+    </html>

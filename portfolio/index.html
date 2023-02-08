@@ -1,0 +1,145 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <style>
+           
+           body {
+            font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+           }
+           p {
+            max-width: 525px;
+           }
+           h1 {
+            padding:30px;
+                  }
+
+            img {
+                max-width: 380px;
+                max-height: 500px;
+                border-radius: 25%;
+                border-style: solid;
+                border-width: 3px;
+            }
+            .listItem {
+                display: flex;
+                padding: 50px;
+            }
+            #headerDiv{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 35px;
+            }
+            .box-1 {
+                flex:2;
+                padding: 25px;
+                width: 100%;
+              
+            }
+            .box-2{
+                flex: 1;
+            }
+            .flexAtom {
+                padding: 50px;
+            }
+            #projectsDiv{
+                padding: 40px;
+                background-color: honeydew;
+                border-style: solid;
+                border-width: 1px;
+            }
+            #blurbimg {
+                order: 2;
+                max-width: 500px;
+            }
+            .mainText {
+                font-family: 'Roboto', sans-serif;
+            }
+            .footer {
+                margin: auto;
+                font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+
+            }
+            .subheading {
+                padding-left: 30px;
+            }
+            nav {
+                border-bottom: solid;
+                border-width: 1px;
+            }
+        </style>
+    <nav class="navbar navbar-light bg-light" id="nav">
+        <a class="navbar-brand" href="aboutme.html">About Me</a> <a class="navbar-brand" href="newResumeFinal.pdf" download>Resume</a> <a class="navbar-brand" href="contactme.html">Contact Me</a> 
+        <a class="navbar-brand" href="https://github.com/peterlukeryan" target="_blank">Github</a> <a class="navbar-brand" href="gallery.html">Gallery</a>
+      </nav>
+    </head>
+    <body>
+        <h1>Peter Ryan</h1>
+        <p class="subheading">Full Stack Developer<p>
+        <div class="text-center" id="headerDiv">
+        <p class="box-1">
+            I'm Peter Ryan, and I started developing in 2017. I specialize in mobile development,
+            but I enjoy everything from frontend web design to backend database management
+            to machine learning programming in Python.
+        </p>
+        <img src = "assets/IMG_4549.jpeg" class="box-2">
+        </div>
+        <div class = "text-center" id="projectsDiv">
+        <h2>Projects</h2>
+        <ul>
+            <li> <p class="font-weight-bold">QuickMaths- iOs (2022)</p><div class = "listItem">
+                <img src="assets/mentalmath.jpg">
+           <div class = "flexAtom">
+                <p class="mainText">What's 46 squared? 64 X 83? What if I told you that you could calculate these in under five seconds, all in your head?<br>
+
+               <br> We've been taught to multiply with pencil and paper. Makes sense. This style, unsurprisingly, saves paper. But QuickMaths teaches you a different way to do things.<br> <br>"Left to Right" multiplication is a powerful technique used by the world's best mental calculators. 
+                
+                <br><br>QuickMaths demonstrates this technique visually, in a fun, intuitive way-- perfect for youngsters and adults alike.  Gotten pretty good? Try your skills out in the arena...</p> 
+           </div>
+        </div>
+            </li>
+            
+        <li> <p class="font-weight-bold">BlurbIt- Python with Flask (2022)</p><div class="listItem">
+            <img src="assets/blurbitcap.png" id="blurbimg">
+            <div class = "flexAtom">
+        <p class="mainText">
+            Four youngsters go out into the woods one weekend for some fun. <br><br> Things start out great, everyone's
+            laughing, it's a blast. Then, out of nowehere, they begin to hear a ghostly screech from the woods. <br> <br>
+            At first it's no big deal, but soon enough, they find out that they're being terrorized by a demonic spirit, hellbent on turning the trip of a lifetime 
+            into a nightmare. <br>
+
+            <br>Sound spooky? BlurbIt thinks so. <br> 
+         BlurbIt is a web application that takes in blurbs, like the creepy one above, and predicts
+        the genre you're trying to describe-- using a custom Logistic Regression Model and data processed 
+        from scratch-- no pre-trained models whatsoever. <br><br> A passion project exploring SciKit learn and Python's Flask module, BlurbIt is a pretty cool
+    example of the power of machine learning. <a href="http://blurbit-env.eba-m5mwcqd5.us-east-2.elasticbeanstalk.com/" target="_blank">Check it out!</a></p>
+            </div>
+            
+    </div>
+ </li>
+ <li>
+    <p class="font-weight-bold">Wonder- iOs (2017-2018)</p> <div class="listItem">
+        <img src="assets/wondertitle.JPG">
+        <div class="flexAtom">
+            <p class="mainText">
+                Travel. Few things ignite the imagination the same way-- new sights, new sounds, new experience. The trouble with travel? Ignorance. The Parthenon and a congress building aren't that different if you don't know anything about ancient Greece.
+
+Wonder was designed to bridge this gap. <br> <br> A simple, easy to use camera app that not only identifies landmarks,
+ but displays interesting information from the site's Wikipedia page,all in real time.  Includes a "Did you know?" button, 
+ which pulls a random fact that you can annoy your friends 
+ with at your next cocktail party.
+            </p>
+        </div>
+   
+    </div>
+ </li>
+</ul>
+        </div>
+        
+    </body>
+    
+</html>
